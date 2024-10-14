@@ -68,7 +68,7 @@
     <project path="system/vold" name="android_system_vold" remote="TeamWin" revision="android-12.1"/>
 
     <!-- Use TeamWin custom vendor repo for build system -->
-    <project path="vendor/twrp" name="br_vendor" remote="BatikRecovery" revision="android-12.1" />
+    <project path="vendor/batik" name="br_vendor" remote="BatikRecovery" revision="android-12.1" />
 
     <!-- Include phh's treble repo for lptools support -->
     <project name="phhusson/vendor_lptools" path="external/lptools" remote="github" revision="master" />

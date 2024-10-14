@@ -9,16 +9,16 @@
 </a>
 
 <a href="#">
-  <img src="https://img.shields.io/badge/build-stable-brightgreen.svg?style=flat-square"
+  <img src="https://img.shields.io/badge/build-unstable-brightgreen.svg?style=flat-square"
     alt="build" />
 </a>
 
 <a href="#">
-  <img src="https://img.shields.io/badge/version-B 1.5.0-green.svg?style=flat-square"
+  <img src="https://img.shields.io/badge/version-B 1.6.0-green.svg?style=flat-square"
     alt="version">
 </a>
 <a href="#">
-  <img src="https://img.shields.io/badge/base-twrp 3.3.1-orange.svg?style=flat-square"
+  <img src="https://img.shields.io/badge/base-twrp 3.7.1-orange.svg?style=flat-square"
     alt="base">
 </a>
 
@@ -137,78 +137,46 @@ Credits
 * [**DARK RECOVERY PROJECT**](https://github.com/DarkRecovery)
 * [**ORANGEFOX RECOVERY PROJECT**](https://gitlab.com/OrangeFox)
 
-Donation
+Donation To Zhantech
 =======
-
-If you feel satisfied with the results of my work, and support my project so that it can be more developed, please donate to the BRI account, with the account number 3112-01-019706-53-4 in the name of "Muhammad Rifa'i Aziz" or through paypal - http://paypal.me/zhantech
-
-* Join on grup ZHAN Project Tester and Report - http://t.me/ZHANreport
-* Follow My Instagram - https://www.instagram.com/zhantech
-* Like My Facebook Fan Page - https://m.facebook.com/zhantech
-
+* ZHAN Project Paypal - http://paypal.me/zhantech
+* ZHAN Project Tester and Report - http://t.me/ZHANreport
+* ZHAN Project Instagram - https://www.instagram.com/zhantech
+* ZHAN Project Facebook - https://m.facebook.com/zhantech
 
 Getting Started
 ===============
 
-To get started with OMNI sources to build TWRP, you'll need to get
-familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
-
-update all packages
-
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-
-use a script for download all packages
+### script for download all packages
 
 ```bash
 cd ~ && sudo apt install git -y && git clone https://github.com/akhilnarang/scripts && cd scripts && sudo bash setup/android_build_env.sh && sudo bash setup/install_android_sdk.bash
 ```
 
-Make Directory 
+### create directory
 
 ```bash
-     mkdir <source-dir>
-     cd <source-dir>
+     mkdir batik
+     cd batik
 ```
 
-(For Example : batik)
-
-```bash
-     mkdir ~/batik
-     cd ~/batik
-```
-
-To initialize Batik Recovery local repository, use this command :
+### initialize Batik Recovery local repository, use this command :
 ```bash
     repo init -u https://github.com/KernelBuilding/br_manifest.git -b android-12.1
-```
-
-Then to sync up :
-```bash
-    repo sync -j$(nproc --all)
+   repo sync -j$(nproc --all)
 ```
 
  Compilation Of Batik Recovery
 =============================
  
 ```bash
-     cd <source-dir>
-     export ALLOW_MISSING_DEPENDENCIES=true
-     . build/envsetup.sh
+cd batik
+export ALLOW_MISSING_DEPENDENCIES=true
+export BR_MAINTAINER="your-name"
 ```     
-     
-Change Maintainer
-```bash
-     export BR_MAINTAINER="your-name"
-```
  
 ```bash
-     lunch twrp_<device>-eng
-     mka recoveryimage
-```
-
-If it fails to compile
-```bash
-     export LC_ALL=C
+source build/envsetup.sh
+lunch twrp_<device>-eng
+mka recoveryimage
 ```

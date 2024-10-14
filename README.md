@@ -181,28 +181,12 @@ Make Directory
 
 To initialize Batik Recovery local repository, use this command :
 ```bash
-    repo init -u git://github.com/BatikRecovery/br_manifest.git -b android-9.0
-```
-
-To initialize a shallow clone, which will save even more space, use a command like this:
-```bash
-    repo init --depth=1 -u git://github.com/BatikRecovery/br_manifest.git -b android-9.0
+    repo init -u https://github.com/KernelBuilding/br_manifest.git -b android-12.1
 ```
 
 Then to sync up :
 ```bash
-    repo sync
-```
-
- Clone Device Tree Of Batik Recovery
-=============================
-
-Ceck on https://github.com/BatikRecovery/br_devices for your device
-
-Example :
-
-```bash
-    git clone https://github.com/BatikRecovery/br_devices.git -b santoni device/xiaomi/santoni
+    repo sync -j$(nproc --all)
 ```
 
  Compilation Of Batik Recovery
@@ -220,7 +204,7 @@ Change Maintainer
 ```
  
 ```bash
-     lunch omni_<device>-eng
+     lunch twrp_<device>-eng
      mka recoveryimage
 ```
 
@@ -228,5 +212,3 @@ If it fails to compile
 ```bash
      export LC_ALL=C
 ```
-
-[![Download BATIK-RECOVERY](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/batik-recovery/files/latest/download)

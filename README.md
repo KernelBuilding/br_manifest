@@ -156,14 +156,14 @@ cd ~ && sudo apt install git -y && git clone https://github.com/akhilnarang/scri
 ### create directory
 
 ```bash
-     mkdir batik
-     cd batik
+mkdir batik
+cd batik
 ```
 
 ### initialize Batik Recovery local repository, use this command :
 ```bash
-    repo init -u https://github.com/KernelBuilding/br_manifest.git -b android-12.1
-   repo sync -j$(nproc --all)
+repo init -u https://github.com/KernelBuilding/br_manifest.git -b android-12.1
+repo sync -j$(nproc --all)
 ```
 
  Compilation Of Batik Recovery

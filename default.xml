@@ -8,6 +8,9 @@
            remote="aosp"
            sync-j="4" />
 
+  <remote name="github"
+          fetch="https://github.com" />
+  
   <superproject name="platform/superproject" remote="aosp" revision="android-12.1.0_r4" />
   <contactinfo bugurl="go/repo-bug" />
 

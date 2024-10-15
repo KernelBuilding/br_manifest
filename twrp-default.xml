@@ -2,15 +2,15 @@
 <manifest>
     <remote name="TeamWin"
             fetch="https://github.com/TeamWin"
-            review="https://gerrit.twrp.me"/>
+            review="https://gerrit.twrp.me" />
 
     <remote name="LineageOS"
             fetch="https://github.com/LineageOS"
-            review="https://review.lineageos.org"/>
+            review="https://review.lineageos.org" />
 
     <remote name="BatikRecovery"
             fetch="https://github.com/Kernelbuilding"
-            revision="android-12.1">
+            revision="android-12.1" />
             
     <!-- We need the TeamWin forks of these repos -->
     <remove-project name="platform/bootable/recovery"/>
